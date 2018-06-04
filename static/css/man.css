@@ -1,0 +1,6 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }

@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block base %}
+<meta http-equiv="refresh" content="3">	
+<div class="wrapper">
+    {% for img in img_list %}
+    <div class="img_file_">    
+        <img src="{{img.file_path}}"> <br>
+        {{ img.file_name }}
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
