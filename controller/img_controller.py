@@ -4,11 +4,12 @@ view file list
 # -*- encoding utf-8 -*-
 import os
 from flask import Blueprint, current_app, render_template
+from flask_login import login_required
 
 APP = Blueprint("img_controller", __name__)
 
-
-@APP.route("/", methods=["GET"])
+@APP.route("/img", methods=["POST", "GET"])
+@login_required
 def root():
     '''
     access dirctory
@@ -26,7 +27,7 @@ def root():
 
     current_app.logger.info(" veiw img files ")
 
-    return render_template('img_list.html', img_list=img_objects)
+    return render_template("img_list.html", img_list=img_objects)
 
 class FileProperty:
     '''

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block base %}
+    {% for field in form.errors %}
+    {% for error in form.errors[field] %}
+        <div >{{error}}</div>
+    {% endfor %}
+    {% endfor %}
+    <form name="login" action="/login" method="POST">
+        {{ form.csrf_token }}
+        <div>{{ form.email }}</div>
+        <div>{{ form.password }}</div>
+    </form>
+    <a href="javascript:login.submit()" class="button green">ログイン</a>
+{% endblock %}

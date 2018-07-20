@@ -1,4 +1,6 @@
 {% extends "base.html" %} {% block base %}
+<form name="logout" action="/logout" method="POST"></form>
+<a href="javascript:logout.submit()" class="button green">ログアウト</a>
 <div class="wrapper">
     {% for img in img_list %}
     <div class="img_file_">    
