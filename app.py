@@ -1,6 +1,6 @@
 
 '''
-create Flask-Notepad
+create Flask-application
 
 '''
 # -*- coding: utf-8 -*-
