@@ -20,6 +20,8 @@ def root():
         lambda name: name.rsplit(".")[1] \
         == "JPG", sorted(os.listdir(path), reverse=True))
 
+    file_names = list(file_names)[0:30]
+
     img_objects = map(\
         lambda file_name: FileProperty(file_name, path + "/" + file_name),\
         file_names)
